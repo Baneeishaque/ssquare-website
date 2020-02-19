@@ -1,0 +1,1278 @@
+@font-face {
+    font-family: 'BlackPinkSignature';
+    src: url('../fonts/Black\ Pink\ Signature.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TenezRegular';
+    src: url('../fonts/Tenez-Regular.ttf') format('truetype');
+}
+
+$primary: #E6B9B2;
+$primary_dark: #BF7A51;
+$primary_dark_2: #E6B9B3;
+
+
+::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    // box-shadow: inset 0 0 6px rgba(#0F7B3E, 0.9);
+    // border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    // box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgba($primary_dark, 0.6);
+    // border: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+
+* {
+    user-select: none;
+}
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.home_header_section {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../assets/image_1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: height 500ms;
+
+    @media only screen and (max-width: 700px) {
+        height: 500px;
+    }
+
+
+    .logo {
+        height: 500px;
+        width: auto;
+        transition: all 500ms;
+
+        @media only screen and (max-width: 700px) {
+            height: 270px;
+        }
+
+    }
+
+}
+
+
+.home_slider_section {
+    min-height: 500px;
+    transition: height 500ms;
+    // border: 1px solid red;
+    overflow: hidden;
+
+    @media only screen and (max-width: 500px) {
+        min-height: 400px;
+        padding: 50px 10px;
+    }
+
+    width: 100%;
+    background-color: #FFFFFF;
+    background: url(../assets/image_2.png) no-repeat center;
+    background-size: cover;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+
+
+    .home_top_panel_container {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        // background-color: yellow;
+
+        width: 100%;
+        height: 45px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 50px;
+        box-sizing: border-box;
+        transition: height 500ms;
+
+        @media only screen and (max-width: 700px) {
+            height: 35px;
+            transition: height 500ms;
+        }
+
+        .home_handler {
+            height: 100%;
+            width: 40px;
+            transition: width 500ms;
+
+            @media only screen and (max-width: 700px) {
+                width: 30px;
+                transition: width 500ms;
+            }
+
+            background: url(../assets/image_3.png) no-repeat center;
+            background-position-x: 60%;
+            background-size: cover;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                height: 20%;
+                width: calc(100% + 2px);
+                left: -1px;
+                position: absolute;
+                top: 20%;
+                background-color: #FFFFFF;
+            }
+
+            &::before {
+                content: "";
+                height: 20%;
+                width: calc(100% + 2px);
+                left: -1px;
+                position: absolute;
+                bottom: 20%;
+                background-color: #FFFFFF;
+            }
+        }
+
+        .home_seach_button {
+            height: 100%;
+            width: auto;
+            cursor: pointer;
+        }
+
+
+    }
+
+
+    .home_data_box {
+        height: fit-content;
+        width: 50%;
+        text-align: center;
+        color: $primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: width 500ms;
+
+        @media only screen and (max-width: 750px) {
+            width: 80%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            width: 100%;
+        }
+
+        .home_header {
+            font-family: "TenezRegular";
+            font-size: 40px;
+            transition: font 500ms;
+
+            @media only screen and (max-width: 500px) {
+                font-size: 25px;
+            }
+
+        }
+
+        .home_sub_header {
+            font-family: "BlackPinkSignature";
+            font-size: 85px;
+            transition: font 500ms;
+
+            @media only screen and (max-width: 500px) {
+                font-size: 60px;
+            }
+        }
+
+        .home_button {
+            background-image: linear-gradient(to right, $primary, $primary_dark);
+            width: fit-content;
+            height: fit-content;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            padding: 12px 30px;
+
+            margin-top: 85px;
+            font-family: "Maven Pro";
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.3px;
+            border-radius: 2px;
+
+            cursor: pointer;
+
+        }
+    }
+
+
+}
+
+
+.home_salone_section {
+    width: 100%;
+    height: fit-content;
+
+
+    .home_caption_container {
+        width: 100%;
+        // height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 10px;
+        box-sizing: border-box;
+        // border: 1px solid red;
+
+        background: url(../assets/image_3.png) no-repeat center;
+        background-size: cover;
+
+        // background-attachment: fixed;
+
+
+        .home_image {
+            height: 60px;
+            width: auto;
+            // margin-bottom: 20px;
+            transition: height 500ms;
+
+            @media only screen and (max-width: 500px) {
+                height: 40px;
+            }
+
+        }
+
+
+        .home_caption_text {
+            color: #FFFFFF;
+            font-family: "TenezRegular";
+            font-weight: 500;
+            font-size: 40px;
+            letter-spacing: 0.4px;
+            margin-bottom: -10px;
+            transition: font 500ms;
+
+            @media only screen and (max-width: 500px) {
+                font-size: 20px;
+            }
+
+        }
+
+
+    }
+
+    .home_salone_body {
+        // border: 1px solid red;
+        box-sizing: border-box;
+        height: 600px;
+        width: 100%;
+
+        background: url(../assets/image_4.png) no-repeat center;
+        background-size: cover;
+        transition: background 500ms;
+        transition: height 500ms;
+
+        @media only screen and (max-width: 700px) {
+            background-position-x: 72%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            height: 300px;
+        }
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        position: relative;
+
+        .home_salone_overlay {
+            position: absolute;
+            height: 0%;
+            width: 0%;
+            right: 0px;
+            bottom: 0px;
+            background-color: rgba(#000000, 0.2);
+            z-index: 1;
+            // display: none;
+            transition: all 500ms;
+
+            @media only screen and (max-width: 700px) {
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
+        .home_salone_data_box {
+            width: 70%;
+            // border: 1px solid red;
+            text-align: center;
+            transition: all 500ms;
+            color: $primary_dark_2;
+
+            z-index: 2;
+
+            @media only screen and (max-width: 700px) {
+                width: 100%;
+                transform: scale(0.7);
+                color: #FFFFFF;
+            }
+
+            @media only screen and (max-width: 500px) {
+                transform: scale(0.5);
+            }
+
+            .home_salone_line_1,
+            .home_salone_line_3 {
+                font-family: "TenezRegular";
+                font-size: 50px;
+                font-weight: 500;
+
+            }
+
+            .home_salone_line_1 {
+                // margin-bottom: 10px;
+            }
+
+            .home_salone_line_3 {
+                margin-top: -140px;
+            }
+
+            .home_salone_line_2 {
+                font-family: "BlackPinkSignature";
+                font-size: 170px;
+                position: relative;
+                top: -100px;
+                left: -50px;
+            }
+
+            .home_salone_line_1,
+            .home_salone_line_2,
+            .home_salone_line_3 {
+                transition: all 1000ms;
+            }
+
+
+        }
+
+
+    }
+
+    .home_salone_footer_section {
+        width: 100%;
+        background-color: #FDE6DE;
+
+        padding: 30px;
+        box-sizing: border-box;
+
+        // transition: all 500ms;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        * {
+            transition: all 500ms;
+        }
+
+        .home_item_body {
+            // border: 1px solid red;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .home_pattern_1 {
+                height: 110px;
+                width: 110px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                background: url(../assets/image_3.png) no-repeat center;
+                background-size: cover;
+                transition: all 500ms;
+
+                background-attachment: fixed;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .home_pattern_2 {
+                    height: calc(100% - 6px);
+                    width: calc(100% - 6px);
+                    border-radius: 50%;
+                    background: url(../assets/image_1.png) no-repeat center;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-size: cover;
+
+                    .home_salone_item_image {
+                        height: 50%;
+                    }
+
+
+                }
+            }
+
+            .home_salone_item_caption {
+                font-family: "TenezRegular";
+                font-size: 14px;
+            }
+
+        }
+
+
+    }
+
+}
+
+
+.home_boutique_section {
+    width: 100%;
+    height: fit-content;
+
+
+    .home_caption_container {
+        width: 100%;
+        // height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 10px;
+        box-sizing: border-box;
+        // border: 1px solid red;
+
+        background: url(../assets/image_3.png) no-repeat center;
+        background-size: cover;
+
+        // background-attachment: fixed;
+
+
+        .home_image {
+            height: 60px;
+            width: auto;
+            // margin-bottom: 20px;
+            transition: height 500ms;
+
+            @media only screen and (max-width: 500px) {
+                height: 40px;
+            }
+
+        }
+
+
+        .home_caption_text {
+            color: #FFFFFF;
+            font-family: "TenezRegular";
+            font-weight: 500;
+            font-size: 40px;
+            letter-spacing: 0.4px;
+            margin-bottom: -10px;
+            transition: font 500ms;
+
+            @media only screen and (max-width: 500px) {
+                font-size: 20px;
+            }
+
+        }
+
+
+    }
+
+    .home_salone_body {
+        // border: 1px solid red;
+        box-sizing: border-box;
+        height: 600px;
+        width: 100%;
+
+        background: url(../assets/image_5.png) no-repeat center;
+        background-size: cover;
+        transition: background 500ms;
+        transition: height 500ms;
+
+        @media only screen and (max-width: 700px) {
+            background-position-x: 72%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            height: 300px;
+        }
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        position: relative;
+
+        .home_salone_overlay {
+            position: absolute;
+            height: 0%;
+            width: 0%;
+            right: 0px;
+            bottom: 0px;
+            background-color: rgba(#000000, 0.2);
+            z-index: 1;
+            // display: none;
+            transition: all 500ms;
+
+            @media only screen and (max-width: 700px) {
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
+        .home_salone_data_box {
+            width: 70%;
+            text-align: center;
+            transition: all 500ms;
+            color: $primary_dark_2;
+            padding: 0px 0px 0px 30px;
+            box-sizing: border-box;
+
+            z-index: 2;
+
+            @media only screen and (max-width: 700px) {
+                width: 100%;
+                transform: scale(0.7);
+                color: #FFFFFF;
+            }
+
+            @media only screen and (max-width: 500px) {
+                transform: scale(0.5);
+            }
+
+            .home_salone_line_1 {
+                font-family: "TenezRegular";
+                font-size: 50px;
+                font-weight: 500;
+
+            }
+
+            .home_salone_line_1 {
+                // margin-bottom: 10px;
+                position: relative;
+                left: -155px;
+
+                @media only screen and (max-width: 500px) {
+                    left: -65px;
+                }
+            }
+
+            .home_salone_line_2 {
+                font-family: "BlackPinkSignature";
+                font-size: 170px;
+                position: relative;
+                top: -100px;
+                // left: 50px;
+
+                @media only screen and (max-width: 500px) {
+                    top: -50px;
+                    font-size: 100px;
+                }
+            }
+
+            .home_salone_line_1,
+            .home_salone_line_2 {
+                transition: all 1000ms;
+            }
+
+
+        }
+
+
+    }
+
+    .home_salone_footer_section {
+        width: 100%;
+        background-color: #FDE6DE;
+
+        padding: 30px;
+        box-sizing: border-box;
+
+        // transition: all 500ms;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        * {
+            transition: all 500ms;
+        }
+
+        .home_item_body {
+            // border: 1px solid red;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .home_pattern_1 {
+                height: 110px;
+                width: 110px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                background: url(../assets/image_3.png) no-repeat center;
+                background-size: cover;
+                transition: all 500ms;
+
+                background-attachment: fixed;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .home_pattern_2 {
+                    height: calc(100% - 6px);
+                    width: calc(100% - 6px);
+                    border-radius: 50%;
+                    background: url(../assets/image_1.png) no-repeat center;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-size: cover;
+
+                    .home_salone_item_image {
+                        height: 50%;
+                    }
+
+
+                }
+            }
+
+            .home_salone_item_caption {
+                font-family: "TenezRegular";
+                font-size: 14px;
+            }
+
+        }
+
+
+    }
+
+}
+
+.home_spa_section {
+    width: 100%;
+    height: fit-content;
+
+
+    .home_caption_container {
+        width: 100%;
+        // height: 100px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: center;
+
+        padding: 30px;
+        box-sizing: border-box;
+        // border: 1px solid red;
+
+        background: url(../assets/image_3.png) no-repeat center;
+        background-size: cover;
+
+        // background-attachment: fixed;
+
+
+        .home_image {
+            height: 60px;
+            width: auto;
+            // margin-bottom: 20px;
+            transition: height 500ms;
+            margin-left: 20px;
+
+            @media only screen and (max-width: 500px) {
+                height: 40px;
+            }
+
+        }
+
+
+        .home_caption_text {
+            color: #FFFFFF;
+            font-family: "TenezRegular";
+            font-weight: 500;
+            font-size: 40px;
+            letter-spacing: 0.4px;
+            margin-bottom: -10px;
+            transition: font 500ms;
+
+            @media only screen and (max-width: 500px) {
+                // font-size: 20px;
+            }
+
+        }
+
+
+    }
+
+    .home_salone_body {
+        // border: 1px solid red;
+        box-sizing: border-box;
+        height: 450px;
+        width: 100%;
+
+        background: url(../assets/image_6.png) no-repeat center;
+        background-size: cover;
+        transition: background 500ms;
+        transition: height 500ms;
+
+        @media only screen and (max-width: 700px) {
+            background-position-x: 80%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            // height: 300px;
+        }
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        position: relative;
+
+        .home_salone_overlay {
+            position: absolute;
+            height: 0%;
+            width: 0%;
+            right: 0px;
+            bottom: 0px;
+            background-color: rgba(#000000, 0.2);
+            z-index: 1;
+            // display: none;
+            transition: all 500ms;
+
+            @media only screen and (max-width: 700px) {
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
+        .home_salone_data_box {
+            z-index: 1;
+            width: 50%;
+            height: fit-content;
+            // border: 1px solid red;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            padding: 20px 0px 20px 150px;
+            box-sizing: border-box;
+
+            transition: all 500ms;
+
+            @media only screen and (max-width: 700px) {
+                width: 100%;
+                padding: 30px;
+                align-items: center;
+            }
+
+            * {
+                transition: all 500ms;
+            }
+            
+
+
+            .home_salone_text {
+                word-wrap: break-word;
+                text-align: right;
+                font-family: "Quicksand";
+                font-size: 13px;
+                line-height: 24px;
+                color: #898989;
+                font-weight: 600;
+
+                @media only screen and (max-width: 700px) {
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-weight: 600;
+
+                }
+
+            }
+
+            .home_salone_button {
+                background-image: linear-gradient(to right, $primary, $primary_dark);
+                width: fit-content;
+                height: fit-content;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                padding: 12px 30px;
+
+                margin-top: 35px;
+                font-family: "Maven Pro";
+                font-weight: 600;
+                font-size: 12px;
+                letter-spacing: 0.3px;
+                border-radius: 2px;
+
+                cursor: pointer;
+            }
+            
+            
+        }
+
+
+    }
+
+    .home_salone_footer_section {
+        width: 100%;
+        background-color: #FDE6DE;
+
+        padding: 30px;
+        box-sizing: border-box;
+
+        // transition: all 500ms;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        * {
+            transition: all 500ms;
+        }
+
+        .home_item_body {
+            // border: 1px solid red;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .home_pattern_1 {
+                height: 110px;
+                width: 110px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                background: url(../assets/image_3.png) no-repeat center;
+                background-size: cover;
+                transition: all 500ms;
+
+                background-attachment: fixed;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .home_pattern_2 {
+                    height: calc(100% - 6px);
+                    width: calc(100% - 6px);
+                    border-radius: 50%;
+                    background: url(../assets/image_1.png) no-repeat center;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-size: cover;
+
+                    .home_salone_item_image {
+                        height: 50%;
+                    }
+
+
+                }
+            }
+
+            .home_salone_item_caption {
+                font-family: "TenezRegular";
+                font-size: 14px;
+            }
+
+        }
+
+
+    }
+
+}
+
+.home_ad_section {
+    width: 100%;
+    height: fit-content;
+
+    .home_salone_body {
+        // border: 1px solid red;
+        box-sizing: border-box;
+        height: 600px;
+        width: 100%;
+
+        background: url(../assets/image_7.png) no-repeat center;
+        background-size: cover;
+        background-position-y: bottom;
+        transition: background 500ms;
+        transition: height 500ms;
+
+        @media only screen and (max-width: 700px) {
+            background-position-x: left;
+            height: 500px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            height: 300px;
+        }
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        position: relative;
+
+        .home_salone_overlay {
+            position: absolute;
+            height: 0%;
+            width: 0%;
+            right: 0px;
+            bottom: 0px;
+            background-color: rgba(#000000, 0.2);
+            z-index: 1;
+            // display: none;
+            transition: all 500ms;
+
+            @media only screen and (max-width: 700px) {
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
+        .home_salone_data_box {
+            width: 70%;
+            text-align: center;
+            transition: all 500ms;
+            color: #FFFFFF;
+            // border: 1px solid red;
+            padding: 0px 0px 0px 30px;
+            box-sizing: border-box;
+            
+            
+
+            z-index: 2;
+
+            @media only screen and (max-width: 700px) {
+                width: 100%;
+                transform: scale(0.7);
+                color: #FFFFFF;
+            }
+
+            @media only screen and (max-width: 500px) {
+                transform: scale(0.5);
+            }
+
+            .home_salone_line_1 {
+                font-family: "TenezRegular";
+                font-size: 50px;
+                font-weight: 500;
+
+            }
+
+            .home_salone_line_1 {
+                // margin-bottom: 10px;
+                position: relative;
+                left: -155px;
+
+                @media only screen and (max-width: 500px) {
+                    left: -65px;
+                }
+            }
+
+            .home_salone_line_2 {
+                font-family: "BlackPinkSignature";
+                font-size: 170px;
+                position: relative;
+                top: -100px;
+                // left: 50px;
+
+                @media only screen and (max-width: 500px) {
+                    top: -50px;
+                    font-size: 100px;
+                }
+            }
+
+            .home_salone_line_1,
+            .home_salone_line_2 {
+                transition: all 1000ms;
+            }
+
+
+        }
+
+
+    }
+
+    .home_salone_footer_section {
+        width: 100%;
+        background-color: #FDE6DE;
+
+        padding: 30px;
+        box-sizing: border-box;
+
+        // transition: all 500ms;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        * {
+            transition: all 500ms;
+        }
+
+        .home_item_body {
+            // border: 1px solid red;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .home_pattern_1 {
+                height: 110px;
+                width: 110px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                background: url(../assets/image_3.png) no-repeat center;
+                background-size: cover;
+                transition: all 500ms;
+
+                background-attachment: fixed;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .home_pattern_2 {
+                    height: calc(100% - 6px);
+                    width: calc(100% - 6px);
+                    border-radius: 50%;
+                    background: url(../assets/image_1.png) no-repeat center;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-size: cover;
+
+                    .home_salone_item_image {
+                        height: 50%;
+                    }
+
+
+                }
+            }
+
+            .home_salone_item_caption {
+                font-family: "TenezRegular";
+                font-size: 14px;
+            }
+
+        }
+
+
+    }
+
+}
+
+
+.home_footer {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    transition: all 500ms;
+    * {
+        transition: all 500ms;
+    }
+
+    .home_top_line {
+        height: 20px;
+        width: 100%;
+        background-color: #FDE6DE;
+    }
+
+    .home_data_box {
+        width: 100%;
+        padding: 40px 60px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        // border: 1px solid orange;
+        transition: all 500ms;
+
+        @media only screen and (max-width: 400px) {
+            padding: 30px;
+        }
+
+
+        .home_left_sec {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            // border: 1px solid red;
+            transition: all 500ms;
+
+            @media only screen and (max-width: 850px) {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .home_left_logo {
+                height: 120px;
+            }
+
+            .home_data_container {
+                display: flex;
+                flex-direction: column;
+                // border: 1px solid red;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                color: #BF887B;
+                font-family: "TenezRegular";
+                font-size: 13px;
+                position: relative;
+
+                .home_heading {
+                    font-size: 15px;
+                    letter-spacing: 0.4px;
+                }
+
+                .home_sub_heading {
+                    margin-top: -6px;
+                }
+
+                .home_line {
+                    height: 1px;
+                    width: 100%;
+                    background-color: #BF887B;
+                    border-radius: 2px;
+                }
+
+                .home_phone, .home_mail, .home_insta {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 5px 0px 0px 0px;
+                    box-sizing: border-box;
+
+                    .home_icon {
+                        height: 17px;
+                        margin-right: 7px;
+
+                        &.phone {
+                            height: 19px;
+                        }
+                        
+                    }
+                    
+                    
+                }
+            }
+            
+            
+        }
+
+        .home_right_sec {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 50%;
+            // border: 1px solid red;
+            color: rgba(#BF887B, 0.7);
+            font-family: "Roboto";
+            font-size: 13px;
+
+            @media only screen and (max-width: 850px) {
+                width: 100%;
+                align-items: center;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 11px;
+            }
+
+            .home_right_data {
+                text-align: center;
+                
+                .home_social_container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding: 20px 0px 15px 0px;
+                    box-sizing: border-box;
+                    // border: 1px solid red;
+
+    
+                    .home_icon {
+                        height: 17px;
+                        margin: 0px 25px;
+
+                        @media only screen and (max-width: 500px) {
+                            margin: 0px 15px;
+                        }
+                    }
+                }
+            }
+
+            
+            
+        }
+        
+        
+    }
+    
+    
+}

@@ -44,7 +44,9 @@ body {
 }
 
 .home_header_section {
-    height: 600px;
+    // height: 600px;
+    height: 100vh;
+    min-height: 300px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -58,7 +60,7 @@ body {
     transition: height 500ms;
 
     @media only screen and (max-width: 700px) {
-        height: 500px;
+        // height: 500px;
     }
 
 

@@ -35,7 +35,8 @@ body {
 }
 
 .home_header_section {
-  height: 600px;
+  height: 100vh;
+  min-height: 300px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,12 +57,6 @@ body {
   background-size: cover;
   -webkit-transition: height 500ms;
   transition: height 500ms;
-}
-
-@media only screen and (max-width: 700px) {
-  .home_header_section {
-    height: 500px;
-  }
 }
 
 .home_header_section .logo {

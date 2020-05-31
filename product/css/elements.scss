@@ -1,0 +1,532 @@
+@import "variables";
+@import "responsive";
+@import "fonts";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    user-select: none;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba($green, 0.6);
+}
+
+.navbar {
+    width: 100%;
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../assets/nav/nav-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 20px;
+
+    transition: height $transition-normal;
+    
+    height: $nav-height;
+
+    @include responsive(tab) {
+        height:  #{$nav-height * 0.75};
+    }
+    
+    @include responsive(mobile) {
+        height:  #{$nav-height * 0.6};
+    }
+
+    .logo {
+        background-image: url(../assets/logo_only_color_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 70px;
+        width: 100px;
+
+        @include responsive(tab) {
+            height: 50px;
+        }
+    }
+    .logo-text {
+        background-image: url(../assets/ssquare_text.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 40px;
+        width: 200px;
+
+        @include responsive(tab) {
+            display: none;
+        }
+        
+    }
+    .search {
+        height: 25px;
+        width: 25px;
+        background-image: url(../assets/search.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include responsive(tab) {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .hamburger-box {
+        height: 25px;
+        width: 30px;
+        position: relative;
+
+        @include responsive(tab) {
+            height: 20px;
+            width: 25px;
+        }
+
+        .hamburger {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $primary_dark;
+            height: 4px;
+            width: 100%;
+            border-radius: 2px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 7px;
+                left: 0px;
+                background-color: $primary_dark;
+                height: 4px;
+                width: 100%;
+                border-radius: 2px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -7px;
+                left: 0px;
+                background-color: $primary_dark;
+                height: 4px;
+                width: 100%;
+                border-radius: 2px;
+            }
+            
+        }
+        
+    }
+}
+
+.nav-line {
+    height: 5px;
+    width: 100%;
+    background-image: url(../assets/image_3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include responsive(tab) {
+        height: 4px;
+    }
+
+    @include responsive(mobile) {
+        height: 3px;
+    }
+}
+
+.believe-section {
+    height: 596px;
+    width: 100%;
+    background-image: url(../assets/bg_1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: $transition-normal;
+    padding: 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    @include responsive(tab) {
+        height: 400px;
+        padding: 50px;
+    }
+
+    @include responsive(mobile) {
+        height: 300px;
+        padding: 20px;
+    }
+    
+}
+
+.text-believe {
+    font-family: "BlackPinkSignature";
+    color: $primary_dark;
+    font-size: 100px;
+    transition: $transition-normal;
+
+    @include responsive(tab) {
+        font-size: 70px;
+    }
+
+    @include responsive(mobile) {
+        font-size: 50px;
+    }
+    
+}
+
+.home_footer {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    transition: all 500ms;
+    * {
+        transition: all 500ms;
+    }
+
+    .home_top_line {
+        height: 20px;
+        width: 100%;
+        background-color: #FDE6DE;
+    }
+
+    .home_data_box {
+        width: 100%;
+        padding: 40px 60px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        // border: 1px solid orange;
+        transition: all 500ms;
+
+        @media only screen and (max-width: 400px) {
+            padding: 30px;
+        }
+
+
+        .home_left_sec {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            // border: 1px solid red;
+            transition: all 500ms;
+
+            @media only screen and (max-width: 850px) {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .home_left_logo {
+                height: 120px;
+            }
+
+            .home_data_container {
+                display: flex;
+                flex-direction: column;
+                // border: 1px solid red;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                color: #BF887B;
+                font-family: "TenezRegular";
+                font-size: 13px;
+                position: relative;
+
+                .home_heading {
+                    font-size: 15px;
+                    letter-spacing: 0.4px;
+                }
+
+                .home_sub_heading {
+                    margin-top: -6px;
+                }
+
+                .home_line {
+                    height: 1px;
+                    width: 100%;
+                    background-color: #BF887B;
+                    border-radius: 2px;
+                }
+
+                .home_phone, .home_mail, .home_insta {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 5px 0px 0px 0px;
+                    box-sizing: border-box;
+
+                    .home_icon {
+                        height: 17px;
+                        margin-right: 7px;
+
+                        &.phone {
+                            height: 19px;
+                        }
+                        
+                    }
+                    
+                    
+                }
+            }
+            
+            
+        }
+
+        .home_right_sec {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 50%;
+            // border: 1px solid red;
+            color: rgba(#BF887B, 0.7);
+            font-family: "TenezRegular";
+            font-size: 13px;
+
+            @media only screen and (max-width: 850px) {
+                width: 100%;
+                align-items: center;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 11px;
+            }
+
+            .home_right_data {
+                text-align: center;
+                
+                .home_social_container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding: 20px 0px 15px 0px;
+                    box-sizing: border-box;
+                    // border: 1px solid red;
+
+    
+                    .home_icon {
+                        height: 17px;
+                        margin: 0px 25px;
+
+                        @media only screen and (max-width: 500px) {
+                            margin: 0px 15px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+//-----------------
+
+
+.products-section-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: relative;
+
+    padding: 50px 0px;
+
+    .samia-logo {
+        
+        background-image: url(../assets/samia.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: $transition-normal;
+        position: absolute;
+        
+
+        height: 100px;
+        width:150px;
+        right: 50px;
+        top: 20px;
+
+        @include responsive(tab) {
+            height: 50px;
+            width: 80px;
+            right: 30px;
+            top: 20px;
+        }
+    
+        @include responsive(mobile) {
+            height: 40px;
+            width: 60px;
+            right: 30px;
+            top: 20px;
+        }
+        
+    }
+
+
+    .product-section {
+
+        padding: 30px 50px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+        @include responsive(tab) {
+            padding: 30px 30px;
+        }
+    
+        @include responsive(mobile) {
+            padding: 20px 15px;
+        }
+
+
+        .header {
+            font-family: "TenezRegular";
+            font-size: 40px;
+            margin: 10px;
+
+            @include responsive(tab) {
+                font-size: 30px;
+            }
+        
+            @include responsive(mobile) {
+                font-size: 20px;
+            }
+        }
+
+
+        .product-container {
+            font-family: "Roboto";
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+
+            @include responsive(tab) {
+                justify-content: center;
+            }
+
+            .product-card {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                transition: $transition-normal;
+
+                margin: 10px;
+                max-width: 280px;
+                text-transform: uppercase;
+
+                @include responsive(tab) {
+                    max-width: 200px;
+                }
+
+                img {
+                    height: 300px;
+                    width: 100%;
+                    object-fit: contain;
+
+                    @include responsive(tab) {
+                        height: 200px;
+                    }
+                    
+                }
+
+                .header-box {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 5px;
+                    padding-bottom: 4px;
+                    font-weight: 500;
+                    font-size: 12px;
+                    margin: 5px 0px;
+
+                   .price {
+                        width: 70px;
+                        padding-left: 5px;
+                        box-sizing: border-box;
+                    }
+                    
+                }
+
+                .variables {
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+
+                    .variable {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        font-size: 13px;
+                        margin-top: 5px;
+                        padding-bottom: 4px;
+
+                        &.line {
+                            border-bottom: 1px solid rgba(black, 0.6);
+                        }
+
+                        @include responsive(tab) {
+                            margin-top: 3px;
+                            padding-bottom: 2px;
+                            font-size: 11px;
+                        }    
+
+                        .name {
+                            display: flex;
+                            flex: 1;
+                            word-wrap: break-word;
+                        }
+
+                        .price {
+                            width: 70px;
+                            padding-left: 5px;
+                            box-sizing: border-box;
+                        }
+                        
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+        
+    }
+    
+}

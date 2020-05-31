@@ -1,0 +1,47 @@
+@import "variables";
+
+@mixin responsive($point) {
+
+    @if $point==xtv {
+        @media only screen and (min-width: $tv) {
+            @content ;
+        }
+    }
+    
+    @else if $point==tv {
+        @media only screen and (max-width: $tv) {
+            @content ;
+        }
+    }
+
+    @else if $point==laptop {
+        @media only screen and (max-width: $laptop) {
+            @content ;
+        }
+    }
+
+    @else if $point==medium {
+        @media only screen and (max-width: $medium) {
+            @content ;
+        }
+    }
+
+    @else if $point==tab {
+        @media only screen and (max-width: $tab) {
+            @content ;
+        }
+    }
+
+    @else if $point==mobile {
+        @media only screen and (max-width: $mobile) {
+            @content ;
+        }
+    }
+
+    @else if $point==xsmall {
+        @media only screen and (max-width: $xsmall) {
+            @content ;
+        }
+
+    }
+}

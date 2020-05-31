@@ -1,0 +1,488 @@
+@import "variables";
+@import "responsive";
+
+// padding
+.pd-20 {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pd-10 {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.pd-0-10 {
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+.pd-10-20 {
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.pd-20-10 {
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.pd-15-20 {
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+.pd-20-30 {
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+
+//vertical
+.pd-v-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.pd-v-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.pd-v-7 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.pd-v-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.pd-v-0-10 {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+//horizontal
+.pd-h-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.pd-h-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.pd-h-0-20 {
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+//responsive 
+.pd-10--r {
+    padding: 10px;
+    box-sizing: border-box;
+    transition: padding $transition-normal;
+
+    @include responsive(medium) {
+        padding: 7px;
+    }
+    
+    @include responsive(tab) {
+        padding: 5px;
+    }
+
+    @include responsive(mobile) {
+        padding: 3px;
+    }   
+}
+
+.pd-20--r {
+    padding: 20px;
+    box-sizing: border-box;
+    transition: padding $transition-normal;
+
+    @include responsive(medium) {
+        padding: 14px;
+    }
+    
+    @include responsive(tab) {
+        padding: 10px;
+    }
+
+    @include responsive(mobile) {
+        padding: 6px;
+    }
+    
+}
+
+.pd-h-20--r {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    transition: padding $transition-normal;
+
+    @include responsive(medium) {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    
+    @include responsive(tab) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    @include responsive(mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    
+}
+
+.pd-v-20--r {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    transition: padding $transition-normal;
+
+    @include responsive(medium) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+    
+    @include responsive(tab) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    @include responsive(mobile) {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+}
+
+.pd-15-20--r {
+    padding: 15px 20px;
+    box-sizing: border-box;
+    
+    @include responsive(medium) {
+        padding: 14px 20px;
+    }
+    
+    @include responsive(tab) {
+        padding: 12px 20px;
+    }
+
+    @include responsive(mobile) {
+        padding: 10px 20px;
+    }
+}
+
+.pd-h-30--r {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+
+    @include responsive(tab) {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    @include responsive(mobile) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+}
+
+.pd-v-10--r {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    transition: padding $transition-normal;
+
+    @include responsive(medium) {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    
+    @include responsive(tab) {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    @include responsive(mobile) {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    } 
+}
+//=============================
+
+//margin
+
+//full
+
+.mr-auto {
+    margin: auto;
+}
+
+.mr-h-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mr-v-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.mr-5 {
+    margin: 5px;
+}
+
+.mr-10 {
+    margin: 10px;
+}
+
+.mr-20 {
+    margin: 20px;
+}
+
+
+// split
+.mr-10-5 {
+    margin: 10px 5px;
+}
+
+.mr-5-10 {
+    margin: 5px 10px;
+}
+
+.mr-10-10 {
+    margin: 10px 10px;
+}
+
+.mr-15-10 {
+    margin: 15px 10px;
+}
+
+.mr-15-20 {
+    margin: 15px 20px;
+}
+
+
+//horizontal
+.mr-h-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.mr-h-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mr-h-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+//vertical
+
+.mr-v-2 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.mr-v-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mr-v-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mr-v-0-10 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.mr-v-15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mr-v-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.c--mobile-pd-v-20-0 {
+    @include responsive(mobile) {
+        padding-top: 20px;
+    }
+}
+
+.mr-v-10-0 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.mr-v-50 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mr-v-1-0 {
+    margin-top: 1px;
+}
+
+//responsive
+.mr-10--r {
+    margin: 10px;
+    transition: margin $transition-normal;
+    
+    @include responsive(medium) {
+        margin: 7px;
+    }
+    
+    @include responsive(tab) {
+        margin: 5px;
+    }
+    
+    @include responsive(mobile) {
+        margin: 3px;
+    }
+    
+}
+
+.mr-v-10--r {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: margin $transition-normal;
+    
+    @include responsive(medium) {
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    
+    @include responsive(tab) {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    @include responsive(mobile) {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+}
+
+.mr-h-10--r {
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: margin $transition-normal;
+    
+    @include responsive(medium) {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+    
+    @include responsive(tab) {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    @include responsive(mobile) {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    
+}
+
+.mr-20--r {
+    margin: 20px;
+    transition: margin $transition-normal;
+    
+    @include responsive(medium) {
+        margin: 14px;
+    }
+    
+    @include responsive(tab) {
+        margin: 10px;
+    }
+    
+    @include responsive(mobile) {
+        margin: 10px;
+    }
+    
+}
+
+.mr-v-20--r {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include responsive(tab) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    @include responsive(mobile) {
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    
+}
+
+.mr-h-20--r {
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: margin $transition-normal;
+    
+    @include responsive(medium) {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+    
+    @include responsive(tab) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    @include responsive(mobile) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+}
+
+.mr-50-20--r {
+    margin: 50px 20px;
+    transition: margin $transition-normal;
+    
+    @include responsive(medium) {
+        margin: 40px 14px;
+    }
+    
+    @include responsive(tab) {
+        margin: 30px 7px;
+    }
+    
+    @include responsive(mobile) {
+        margin: 20px 0px;
+    }
+    
+}
+
+//=============================

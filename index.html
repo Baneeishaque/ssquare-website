@@ -1,33 +1,48 @@
 <html>
-    <head>
-        <title>ssquared | Home</title>
-        <link rel="icon" type="image/png" href="assets/logo_black.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Maven+Pro:600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:500,600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
-    </head>
-    <body>
-            
-        <div class="home_header_section">
-            <img src="assets/logo_color.png" alt="" class="logo">
-        </div>
+<head>
+    <title>ssquared | Home </title>
+    <link rel="icon" type="image/png" href="assets/logo_black.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sidebaar.css" type="text/css"/>
+</head>
+<body>
 
+
+<div class="d-flex toggled" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-transparent border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">S. Squared</div>
+        <div class="list-group list-group-flush">
+            <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
+            <a href="product/portfolio.html" class="list-group-item list-group-item-action bg-light">Products</a>
+            <a href="abouts-us.html" class="list-group-item list-group-item-action bg-light">About Us</a>
+        </div>
+    </div>
+
+    <div id="page-content-wrapper">
+        <div class="home_header_section">
+            <img src="assets/logo_color.png" alt="" class="logo" id="home-header-logo">
+        </div>
         <div class="home_slider_section">
             <div class="home_top_panel_container">
-                <div class="home_handler"></div>
+               <a id="menu-toggle"><div class="home_handler"></div></a>
                 <img src="assets/search.svg" alt="" class="home_seach_button">
             </div>
 
             <div class="home_data_box">
-                <div class="home_header">We&nbsp;care&nbsp;for&nbsp;your</div>
-                <div class="home_sub_header">comfort</div>
+                <div class="home_header">I&nbsp;believe&nbsp;in</div>
+                <div class="home_sub_header">the power of dreams.</div>
+                <div class="home_sub_sub_header">Never stop believing in your dreams.</div>
 
-                <div class="home_button">read&nbsp;more</div>
+                <div class="home_button"><a class="read_more_btn" href="abouts-us.html">read&nbsp;more</a></div>
             </div>
-            
-            
+
+
         </div>
 
         <div class="home_salone_section">
@@ -78,7 +93,7 @@
                         <div class="home_salone_item_caption">Facial</div>
                     </div>
                 </div>
-                
+
                 <div class="home_salone_item">
                     <div class="home_item_body">
                         <div class="home_pattern_1">
@@ -89,7 +104,7 @@
                         <div class="home_salone_item_caption">Makeup</div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
@@ -102,9 +117,14 @@
                 <div class="home_salone_overlay"></div>
                 <div class="home_salone_data_box">
                     <div class="home_salone_text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industryhe printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industryhe printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                        make a
+                        type specimen book.
                     </div>
-                    <div class="home_salone_button">read&nbsp;more</div>
+                    <div class="home_salone_button"><a class="home_salone_read_more_btn" href="services.html">Read more</a>&nbsp;</div>
                 </div>
             </div>
         </div>
@@ -141,7 +161,8 @@
                     <div class="home_data_container">
 
                         <div class="home_heading">S.Squared</div>
-                        <div class="home_sub_heading">Beauty&nbsp;Salon&nbsp;&bull;&nbsp;Spa&nbsp;&bull;&nbsp;Boutique</div>
+                        <div class="home_sub_heading">Beauty&nbsp;Salon&nbsp;&bull;&nbsp;Spa&nbsp;&bull;&nbsp;Boutique
+                        </div>
                         <div class="home_line"></div>
 
                         <div class="home_phone">
@@ -156,23 +177,38 @@
                             <img src="assets/instagram.svg" alt="" class="home_icon">
                             <div>@ssquare_salon</div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="home_right_sec">
                     <div class="home_right_data">
                         <div class="home_social_container">
-                            <a href="www.facebook.com"><img class="home_icon" src="assets/social/facebook.svg" alt=""></a>
+                            <a href="www.facebook.com"><img class="home_icon" src="assets/social/facebook.svg"
+                                                            alt=""></a>
                             <a href="www.instagram.com"><img class="home_icon" src="assets/social/instagram.svg" alt=""></a>
                             <a href="www.youtube.com"><img class="home_icon" src="assets/social/youtube.svg" alt=""></a>
                             <a href="www.twitter.com"><img class="home_icon" src="assets/social/twitter.svg" alt=""></a>
-                            <a href="www.linkedin.com"><img class="home_icon" src="assets/social/linkedin.svg" alt=""></a>
+                            <a href="www.linkedin.com"><img class="home_icon" src="assets/social/linkedin.svg"
+                                                            alt=""></a>
                         </div>
                         <div class="home_copyright">Copyright &copy; 2019 S.SQUARE All Rights Reserved</div>
                     </div>
                 </div>
             </div>
         </div>
-        
-    </body>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+
+</body>
 </html>

@@ -9,10 +9,25 @@
     <link rel="stylesheet" type="text/css" href="css/elements.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
     <link rel="stylesheet" type="text/css" href="css/position.css" />
+    <link rel="stylesheet" href="../css/navbar.css" type="text/css"/>
     <title>ssquared | portfolio</title>
 </head>
 
 <body>
+
+
+    <div class="mob-nav">
+        <div class="close" id="mob-nav-close"></div>
+    
+        <div class="inner-body">
+            <img src="assets/logo_black.png" alt="">
+            <a href="../index.html"><div target="home-section" class="item">HOME</div></a>
+            <a href="../abouts-us.html"><div target="about-us-section" class="item">ABOUT</div></a>
+            <a href="../services.html"><div target="service-section" class="item">SERVICES</div></a>
+            <a href="product/portfolio.html"><div target="gallery-section" class="item active">PRODUCTS</div></a>
+        </div>
+    
+    </div>
 
     <div class="navbar">
         <div class="flex flex-row flex-align-end">
@@ -472,5 +487,19 @@
 </body>
 
 <script src="js/jquery_3_4.js"></script>
-<script src="js/elements.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script>
+    $(document).ready(function() {
+
+        $(".hamburger-box").click(function() {
+            $(".mob-nav").addClass("active");
+        })
+
+        
+        $("#mob-nav-close").click(function() {
+            $(".mob-nav").removeClass("active");
+        });
+    });
+</script>
 </html>

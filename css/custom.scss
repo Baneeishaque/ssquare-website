@@ -1,0 +1,663 @@
+@import "variables";
+@import "responsive";
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    user-select: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba($green, 0.6);
+}
+
+.container {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+}
+
+.container-pad-10 {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+.container-full {
+    width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container,
+.container-full,
+.flex,
+.flex-row,
+.flex-col {
+    &.curve {
+        border-radius: 3px;
+    }
+}
+
+.over-hidden {
+    overflow: hidden;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    flex: 1;
+}
+
+.flex-row,
+.flex-col {
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    &.flex-center {
+        justify-content: center;
+        align-items: center;
+    }
+    &.flex-align-end {
+        align-items: flex-end;
+    }
+    &.flex-align-start {
+        align-items: flex-start;
+    }
+    &.flex-align-center {
+        align-items: center;
+    }
+    &.flex-justify-end {
+        justify-content: flex-end;
+    }
+    &.flex-justify-start {
+        justify-content: flex-start;
+    }
+    &.flex-justify-center {
+        justify-content: center;
+    }
+    &.flex-justify-between {
+        justify-content: space-between;
+    }
+    &.flex-justify-end {
+        justify-content: flex-end;
+    }
+}
+
+.anime {
+    transition: $transition-normal !important;
+}
+
+.no-anime {
+    transition: unset !important;
+}
+
+.align-self-end {
+    align-self: flex-end;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.justify-self-end {
+    justify-self: flex-end;
+}
+
+.c--mobile-justify-self-end {
+    @include responsive(mobile) {
+        justify-self: flex-end;
+    }
+}
+
+a {
+    &.unset {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-break {
+    word-break: break-all;
+}
+
+.text-primary {
+    &,
+    * {
+        font-family: "Work Sans" !important;
+    }
+}
+
+.text {
+    font-size: 16px;
+    transition: $transition-normal;
+    &.text-normal {
+        font-size: 16px;
+        @include responsive(tab) {
+            font-size: 15px;
+        }
+        @include responsive(mobile) {
+            font-size: 13px;
+        }
+    }
+    &.c--tab-text-small {
+        @include responsive(tab) {
+            font-size: 13px !important;
+        }
+    }
+    &.c--mobile-text-small {
+        @include responsive(mobile) {
+            font-size: 13px !important;
+        }
+    }
+    &.c--mobile-text-xsmall {
+        @include responsive(mobile) {
+            font-size: 12px !important;
+        }
+    }
+    &.text-small {
+        font-size: 13px;
+    }
+    &.text-xsmall {
+        font-size: 12px;
+    }
+    &.text-macro {
+        font-size: 10px;
+    }
+    &.text-tiny {
+        font-size: 8px;
+    }
+    &.text-upper {
+        text-transform: uppercase;
+    }
+    &.primary {
+        font-family: "Work Sans";
+    }
+    &.secondary {
+        font-family: "Nunito";
+    }
+    &.celias {
+        font-family: "Celias";
+    }
+    &.celias-light {
+        font-family: "Celias Light";
+    }
+    &.grey {
+        color: $grey;
+    }
+    &.green {
+        color: $green;
+    }
+    &.light-grey {
+        color: rgba($grey, 0.9);
+    }
+    &.red {
+        color: $red;
+    }
+    &.black {
+        color: $black;
+    }
+    &.white {
+        color: white;
+    }
+    &.h2 {
+        font-size: 30px;
+    }
+    &.h3 {
+        font-size: 27px;
+    }
+    &.h4 {
+        font-size: 22px;
+    }
+    &.h5 {
+        font-size: 16px;
+        &.--r {
+            @include responsive(mobile) {
+                font-size: 12px;
+            }
+        }
+    }
+    &.h6 {
+        font-size: 15px;
+        line-height: 22px;
+        transition: none;
+        @include responsive(tab) {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        @include responsive(mobile) {
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+    &.justify {
+        text-align: justify;
+    }
+    &.justify--r {
+        text-align: justify;
+        @include responsive(tab) {
+            text-align: inherit;
+        }
+    }
+    &.center {
+        text-align: center;
+    }
+}
+
+.bg-light-grey {
+    background-color: $light_grey;
+}
+
+.bg-light-blue {
+    background-color: $light_blue;
+}
+
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-green {
+    background-color: $green;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-dark-red {
+    background-color: $dark-red;
+}
+
+.min-w-320 {
+    min-width: 280px;
+}
+
+min-w-200 {
+    min-width: 160px;
+}
+
+min-h-vh {
+    min-height: 100vh !important;
+}
+
+.min-w-500--r {
+    min-width: 500px;
+    @include responsive(tab) {
+        min-width: 320px;
+    }
+    @include responsive(mobile) {
+        min-width: 260px;
+    }
+}
+
+.max-w-400 {
+    max-width: 400px;
+}
+
+.max-w-300 {
+    max-width: 300px;
+}
+
+.max-w-350 {
+    max-width: 350px;
+}
+
+.max-w-200 {
+    max-width: 200px;
+}
+
+.max-w-500 {
+    max-width: 500px;
+}
+
+.max-w-700 {
+    max-width: 700px;
+}
+
+.max-w-fit {
+    max-width: fit-content;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.max-h-fit {
+    max-height: fit-content;
+    height: fit-content;
+}
+
+.max-h-120 {
+    max-height: 120px;
+}
+
+.max-h-150 {
+    max-height: 150px;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.h-60 {
+    height: 60px;
+}
+
+.h-40 {
+    height: 40px;
+}
+
+.h-30 {
+    height: 30px;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.shadow {
+    box-shadow: 0px 3px 5px 1px rgba($grey, 0.35);
+}
+
+.shadow-bigger-dark {
+    box-shadow: 0px 0px 1000px 400px rgba(black, 0.5);
+}
+
+.hover-shadow {
+    transition: box-shadow $transition-normal;
+    &:hover {
+        box-shadow: 0px 3px 5px 1px rgba($grey, 0.35);
+    }
+}
+
+.hover-resize {
+    transition: transform $transition-normal;
+    &:hover {
+        transform: scale(1.1)
+    }
+}
+
+.hover-bg-light-grey {
+    transition: background $transition-normal;
+    &:hover {
+        background-color: $light_grey;
+    }
+}
+
+.bd-light {
+    border: 0.5px solid rgba($grey, .45);
+}
+
+.bd-v-i-0--b {
+    border-bottom-width: 0px;
+    &:nth-last-child(1) {
+        border-bottom-width: 1px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.v-hidden {
+    visibility: hidden;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.no-transition {
+    transition: none;
+}
+
+.scroll-y {
+    overflow-y: scroll;
+}
+
+.relative {
+    position: relative;
+    &>.overlay {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(black, 0.5);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+.index-1 {
+    z-index: 1;
+}
+
+.index--1 {
+    z-index: -1;
+}
+
+.index-2 {
+    z-index: 2;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fixed {
+    position: fixed;
+}
+
+.cut-line {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        border-radius: 3px;
+        height: 2px;
+        width: 90%;
+    }
+    &.black {
+        &::after {
+            background-color: $black;
+        }
+    }
+}
+
+.scroll-w-small {
+    &::-webkit-scrollbar-track {
+        background-color: #FFFFFF;
+    }
+    &::-webkit-scrollbar {
+        width: $scroll-width-small;
+        background-color: #FFFFFF;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba($green, 0.6);
+    }
+}
+
+.resize-8 {
+    transform: scale(0.8);
+}
+
+.size-60 {
+    height: 60px;
+    width: 60px;
+}
+
+.size-25 {
+    height: 25px;
+    width: 25px;
+}
+
+// custom responsive
+//mobile
+.c--mobile-flex-col {
+    @include responsive(mobile) {
+        flex-direction: column;
+    }
+}
+
+.c--mobile-size-70 {
+    @include responsive(mobile) {
+        transform: scale(0.7);
+    }
+}
+
+.c--mobile-flex {
+    @include responsive(mobile) {
+        display: flex;
+        flex: 1;
+    }
+}
+
+.c--mobile-text-right {
+    @include responsive(mobile) {
+        text-align: right;
+    }
+}
+
+.c--mobile-text-full {
+    @include responsive(mobile) {
+        width: 100%;
+    }
+}
+
+.c--mobile-min-w-unset {
+    @include responsive(mobile) {
+        min-width: unset;
+    }
+}
+
+.c--mobile-min-w-250 {
+    @include responsive(mobile) {
+        min-width: 250px;
+    }
+}
+
+.c--mobile-min-w-220 {
+    @include responsive(mobile) {
+        min-width: 200px;
+    }
+}
+
+.c--mobile-min-w-200 {
+    @include responsive(mobile) {
+        min-width: 170px;
+    }
+}
+
+.c--mobile-resize-8 {
+    @include responsive(mobile) {
+        transform: scale(0.8);
+    }
+}
+
+.c--mobile-pad-h-0 {
+    @include responsive(mobile) {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+
+//tab
+.c--tab-container {
+    @include responsive(tab) {
+        padding-left: 5%;
+        padding-right: 5%;
+        box-sizing: border-box;
+    }
+}
+
+.c--tab-hidden {
+    @include responsive(tab) {
+        background-color: yellow;
+        display: none !important;
+    }
+}
+
+//laptop
+.c--laptop-max-w-unset {
+    @include responsive(laptop) {
+        max-width: unset;
+    }
+}
+
+.c--laptop-hidden {
+    @include responsive(laptop) {
+        display: none !important;
+    }
+}
+
+//tv
+.c--tv-max-w-unset {
+    @include responsive(tv) {
+        max-width: unset;
+    }
+}

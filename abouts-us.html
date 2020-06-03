@@ -9,22 +9,22 @@
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/sidebaar.css" type="text/css"/>
-
-
+    <link rel="stylesheet" href="css/navbar.css" type="text/css"/>
 </head>
 
 <body>
 
-<div class="d-flex toggled" id="wrapper">
-    <!-- Sidebar -->
-    <div class="bg-transparent border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading">S. Squared</div>
-        <div class="list-group list-group-flush">
-            <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
-            <a href="product/portfolio.html" class="list-group-item list-group-item-action bg-light">Products</a>
-            <a href="abouts-us.html" class="list-group-item list-group-item-action bg-light">About Us</a>
-            <a href="services.html" class="list-group-item list-group-item-action bg-light">Services</a>
+    <div class="mob-nav">
+        <div class="close" id="mob-nav-close"></div>
+    
+        <div class="inner-body">
+            <img src="product/assets/logo_black.png" alt="">
+            <a href="index.html"><div target="home-section" class="item">HOME</div></a>
+            <a href="abouts-us.html"><div target="about-us-section" class="item active">ABOUT</div></a>
+            <a href="services.html"><div target="service-section" class="item">SERVICES</div></a>
+            <a href="product/portfolio.html"><div target="gallery-section" class="item">PRODUCTS</div></a>
         </div>
+    
     </div>
 
     <div id="page-content-wrapper">
@@ -128,16 +128,22 @@
             </div>
         </div>
     </div>
-</div>
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Menu Toggle Script -->
 <script>
-    $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+    $(document).ready(function() {
+
+        $("#menu-toggle").click(function() {
+            $(".mob-nav").addClass("active");
+        })
+
+        
+        $("#mob-nav-close").click(function() {
+            $(".mob-nav").removeClass("active");
+        });
     });
 </script>
 

@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'BlackPinkSignature';
+  src: url("../fonts/Black_Pink_Signature.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'TenezRegular';
+  src: url("../fonts/Tenez-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'TenezItalic';
+  src: url("../fonts/Tenez-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'TakenbyVulturesDemo';
+  src: url("../fonts/Taken_by_Vultures_Demo.otf") format("truetype");
+}
+
+.mob-nav {
+  position: fixed;
+  left: calc(0% - 100%);
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: scroll;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.mob-nav::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.mob-nav.active {
+  left: 0px;
+}
+
+.mob-nav .close {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-image: url(../assets/close.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.mob-nav .inner-body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mob-nav .inner-body img {
+  height: 140px;
+  width: auto;
+  margin-bottom: 40px;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.mob-nav .inner-body img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.mob-nav .inner-body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mob-nav .inner-body .item {
+  padding: 7px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 7px;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  font-family: 'TenezRegular';
+  font-weight: bold;
+  color: #6D6E71;
+}
+
+.mob-nav .inner-body .item::after {
+  content: "";
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background-color: #f8caca;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  opacity: 0.4;
+}
+
+.mob-nav .inner-body .item::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 800ms;
+  transition: 800ms;
+  opacity: 0.6;
+}
+
+.mob-nav .inner-body .item.pop::after {
+  height: 2000px;
+  width: 2000px;
+  opacity: 1;
+}
+
+.mob-nav .inner-body .item.pop::before {
+  height: 2000px;
+  width: 2000px;
+  opacity: 1;
+}
+
+.mob-nav .inner-body .item:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+
+.mob-nav .inner-body .item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #AC6A6C;
+}
+
+.mob-nav .inner-body .item.active {
+  color: #AC6A6C;
+}
+/*# sourceMappingURL=navbar.css.map */

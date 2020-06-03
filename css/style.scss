@@ -1,3 +1,8 @@
+@import "../product/css/variables";
+@import "../product/css/responsive";
+@import "../product/css/fonts";
+
+
 @font-face {
   font-family: 'BlackPinkSignature';
   src: url('../fonts/Black_Pink_Signature.ttf') format('truetype');
@@ -54,6 +59,138 @@ body {
 }
 
 
+
+.navbar {
+  width: 100%;
+  background-color: $light-grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../product/assets/nav/nav-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px 20px;
+
+  transition: height $transition-normal;
+  
+  height: $nav-height;
+
+  @include responsive(tab) {
+      height:  #{$nav-height * 0.75};
+  }
+  
+  @include responsive(mobile) {
+      height:  #{$nav-height * 0.6};
+  }
+
+  .logo {
+      background-image: url(../product/assets/logo_only_color_small.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 70px;
+      width: 100px;
+
+      @include responsive(tab) {
+          height: 50px;
+      }
+  }
+  .logo-text {
+      background-image: url(../assets/ssquare_text.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 40px;
+      width: 200px;
+
+      @include responsive(tab) {
+          display: none;
+      }
+      
+  }
+  .search {
+      height: 25px;
+      width: 25px;
+      background-image: url(../assets/search.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include responsive(tab) {
+          height: 20px;
+          width: 20px;
+      }
+  }
+
+  .hamburger-box {
+      height: 25px;
+      width: 30px;
+      position: relative;
+
+      @include responsive(tab) {
+          height: 20px;
+          width: 25px;
+      }
+
+      .hamburger {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-color: $primary_dark;
+          height: 4px;
+          width: 100%;
+          border-radius: 2px;
+
+          &::after {
+              content: "";
+              position: absolute;
+              top: 9px;
+              left: 0px;
+              background-color: $primary_dark;
+              height: 4px;
+              width: 100%;
+              border-radius: 2px;
+          }
+
+          &::before {
+              content: "";
+              position: absolute;
+              top: -9px;
+              left: 0px;
+              background-color: $primary_dark;
+              height: 4px;
+              width: 100%;
+              border-radius: 2px;
+          }
+          
+      }
+      
+  }
+}
+
+.nav-line {
+  height: 5px;
+  width: 100%;
+  background-image: url(../assets/image_3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include responsive(tab) {
+      height: 4px;
+  }
+
+  @include responsive(mobile) {
+      height: 3px;
+  }
+}
+
+
+
+
 .home_header_section {
   // height: 600px;
   height: 100vh;
@@ -69,6 +206,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   transition: height 500ms;
+
+  overflow: hidden;
 
   @media only screen and (max-width: 700px) {
     // height: 500px;
@@ -241,7 +380,8 @@ body {
     }
 
     .read_more_btn {
-      color: #FFFFFF;
+      color: inherit;
+      text-decoration: none;
     }
 
     .home_sub_header {
@@ -911,28 +1051,30 @@ body {
 
       }
 
-
-      .home_salone_button {
-        background-image: linear-gradient(to right, $primary, $primary_dark);
-        width: fit-content;
-        height: fit-content;
-        color: #FFFFFF;
-        text-transform: uppercase;
-        padding: 12px 30px;
-
+      .home_salone_read_more_btn {
+        color: inherit;
+        text-decoration: none;
         margin-top: 35px;
-        font-family: "Maven Pro";
-        font-weight: 600;
-        font-size: 12px;
-        letter-spacing: 0.3px;
-        border-radius: 2px;
-
-        cursor: pointer;
-
-        .home_salone_read_more_btn {
+        
+        .home_salone_button {
+          background-image: linear-gradient(to right, $primary, $primary_dark);
+          width: fit-content;
+          height: fit-content;
           color: #FFFFFF;
+          text-transform: uppercase;
+          padding: 12px 30px !important;
+  
+          font-family: "Maven Pro";
+          font-weight: 600;
+          font-size: 12px;
+          letter-spacing: 0.3px;
+          border-radius: 2px;
+  
+          cursor: pointer;
+  
         }
       }
+
 
 
     }

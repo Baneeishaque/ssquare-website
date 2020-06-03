@@ -8,192 +8,190 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/sidebaar.css" type="text/css"/>
+    <link rel="stylesheet" href="css/navbar.css" type="text/css"/>
 </head>
 <body>
 
+<div class="mob-nav">
+    <div class="close" id="mob-nav-close"></div>
 
-<div class="d-flex toggled" id="wrapper">
-    <!-- Sidebar -->
-    <div class="bg-transparent border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading">S. Squared</div>
-        <div class="list-group list-group-flush">
-            <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
-            <a href="product/portfolio.html" class="list-group-item list-group-item-action bg-light">Products</a>
-            <a href="abouts-us.html" class="list-group-item list-group-item-action bg-light">About Us</a>
-            <a href="services.html" class="list-group-item list-group-item-action bg-light">Services</a>
+    <div class="inner-body">
+        <img src="product/assets/logo_black.png" alt="">
+        <a href="index.html"><div target="home-section" class="item active">HOME</div></a>
+        <a href="abouts-us.html"><div target="about-us-section" class="item">ABOUT</div></a>
+        <a href="services.html"><div target="service-section" class="item">SERVICES</div></a>
+        <a href="product/portfolio.html"><div target="gallery-section" class="item">PRODUCTS</div></a>
+    </div>
+
+</div>
+
+<div id="page-content-wrapper">
+    <div class="home_header_section">
+        <img src="assets/logo_color.png" alt="" class="logo" id="home-header-logo">
+    </div>
+    <div class="home_slider_section">
+        <div class="home_top_panel_container">
+           <a id="menu-toggle"><div class="home_handler"></div></a>
+            <img src="assets/search.svg" alt="" class="home_seach_button">
+        </div>
+
+        <div class="home_data_box">
+            <div class="home_header">I&nbsp;believe&nbsp;in</div>
+            <div class="home_sub_header">the power of dreams.</div>
+            <div class="home_sub_sub_header">Never stop believing in your dreams.</div>
+            <div class="home_button" style="width: 140px"><a class="read_more_btn" href="abouts-us.html" style="color: inherit; width: 140px; height: fit-content;">read&nbsp;more</a></div>
+        </div>
+
+
+    </div>
+
+    <div class="home_salone_section">
+        <div class="home_caption_container">
+            <img src="assets/salone_hair.png" alt="" class="home_image">
+            <div class="home_caption_text">Beauty&nbsp;Salon</div>
+        </div>
+        <div class="home_salone_body">
+            <div class="home_salone_overlay"></div>
+            <div class="home_salone_data_box">
+                <div class="home_salone_line_1">Bring&nbsp;out&nbsp;the</div>
+                <div class="home_salone_line_2">elegance</div>
+                <div class="home_salone_line_3">in&nbsp;you</div>
+            </div>
+        </div>
+        <div class="home_salone_footer_section">
+
+
+            <div class="home_salone_item">
+                <div class="home_item_body">
+                    <div class="home_pattern_1">
+                        <div class="home_pattern_2">
+                            <img src="assets/asset_1.png" alt="" class="home_salone_item_image">
+                        </div>
+                    </div>
+                    <div class="home_salone_item_caption">Hair&nbsp;Color</div>
+                </div>
+            </div>
+
+            <div class="home_salone_item">
+                <div class="home_item_body">
+                    <div class="home_pattern_1">
+                        <div class="home_pattern_2">
+                            <img src="assets/asset_2.png" alt="" class="home_salone_item_image">
+                        </div>
+                    </div>
+                    <div class="home_salone_item_caption">Hair&nbsp;Straightening</div>
+                </div>
+            </div>
+
+            <div class="home_salone_item">
+                <div class="home_item_body">
+                    <div class="home_pattern_1">
+                        <div class="home_pattern_2">
+                            <img src="assets/asset_3.png" alt="" class="home_salone_item_image">
+                        </div>
+                    </div>
+                    <div class="home_salone_item_caption">Facial</div>
+                </div>
+            </div>
+
+            <div class="home_salone_item">
+                <div class="home_item_body">
+                    <div class="home_pattern_1">
+                        <div class="home_pattern_2">
+                            <img src="assets/asset_4.png" alt="" class="home_salone_item_image">
+                        </div>
+                    </div>
+                    <div class="home_salone_item_caption">Makeup</div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div id="page-content-wrapper">
-        <div class="home_header_section">
-            <img src="assets/logo_color.png" alt="" class="logo" id="home-header-logo">
+    <div class="home_spa_section">
+        <div class="home_caption_container">
+            <img src="assets/spa.png" alt="" class="home_image">
+            <div class="home_caption_text">Spa</div>
         </div>
-        <div class="home_slider_section">
-            <div class="home_top_panel_container">
-               <a id="menu-toggle"><div class="home_handler"></div></a>
-                <img src="assets/search.svg" alt="" class="home_seach_button">
-            </div>
-
-            <div class="home_data_box">
-                <div class="home_header">I&nbsp;believe&nbsp;in</div>
-                <div class="home_sub_header">the power of dreams.</div>
-                <div class="home_sub_sub_header">Never stop believing in your dreams.</div>
-
-                <div class="home_button" style="width: 140px"><a class="read_more_btn" href="abouts-us.html" style="color: inherit; width: 140px; height: fit-content;">read&nbsp;more</a></div>
-            </div>
-
-
-        </div>
-
-        <div class="home_salone_section">
-            <div class="home_caption_container">
-                <img src="assets/salone_hair.png" alt="" class="home_image">
-                <div class="home_caption_text">Beauty&nbsp;Salon</div>
-            </div>
-            <div class="home_salone_body">
-                <div class="home_salone_overlay"></div>
-                <div class="home_salone_data_box">
-                    <div class="home_salone_line_1">Bring&nbsp;out&nbsp;the</div>
-                    <div class="home_salone_line_2">elegance</div>
-                    <div class="home_salone_line_3">in&nbsp;you</div>
+        <div class="home_salone_body">
+            <div class="home_salone_overlay"></div>
+            <div class="home_salone_data_box">
+                <div class="home_salone_text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the
+                    industryhe printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                    make a
+                    type specimen book.
                 </div>
-            </div>
-            <div class="home_salone_footer_section">
-
-
-                <div class="home_salone_item">
-                    <div class="home_item_body">
-                        <div class="home_pattern_1">
-                            <div class="home_pattern_2">
-                                <img src="assets/asset_1.png" alt="" class="home_salone_item_image">
-                            </div>
-                        </div>
-                        <div class="home_salone_item_caption">Hair&nbsp;Color</div>
-                    </div>
-                </div>
-
-                <div class="home_salone_item">
-                    <div class="home_item_body">
-                        <div class="home_pattern_1">
-                            <div class="home_pattern_2">
-                                <img src="assets/asset_2.png" alt="" class="home_salone_item_image">
-                            </div>
-                        </div>
-                        <div class="home_salone_item_caption">Hair&nbsp;Straightening</div>
-                    </div>
-                </div>
-
-                <div class="home_salone_item">
-                    <div class="home_item_body">
-                        <div class="home_pattern_1">
-                            <div class="home_pattern_2">
-                                <img src="assets/asset_3.png" alt="" class="home_salone_item_image">
-                            </div>
-                        </div>
-                        <div class="home_salone_item_caption">Facial</div>
-                    </div>
-                </div>
-
-                <div class="home_salone_item">
-                    <div class="home_item_body">
-                        <div class="home_pattern_1">
-                            <div class="home_pattern_2">
-                                <img src="assets/asset_4.png" alt="" class="home_salone_item_image">
-                            </div>
-                        </div>
-                        <div class="home_salone_item_caption">Makeup</div>
-                    </div>
-                </div>
-
+                <a class="home_salone_read_more_btn" href="services.html"><div class="home_salone_button">Read&nbsp;more</div></a>
             </div>
         </div>
+    </div>
 
-        <div class="home_spa_section">
-            <div class="home_caption_container">
-                <img src="assets/spa.png" alt="" class="home_image">
-                <div class="home_caption_text">Spa</div>
-            </div>
-            <div class="home_salone_body">
-                <div class="home_salone_overlay"></div>
-                <div class="home_salone_data_box">
-                    <div class="home_salone_text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the
-                        industryhe printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a
-                        type specimen book.
-                    </div>
-                    <div class="home_salone_button"><a class="home_salone_read_more_btn" href="services.html">Read more</a>&nbsp;</div>
-                </div>
+    <div class="home_ad_section">
+        <div class="home_salone_body">
+            <div class="home_salone_overlay"></div>
+            <div class="home_salone_data_box">
+                <div class="home_salone_line_1">Touching&nbsp;life</div>
+                <div class="home_salone_line_2">every&nbsp;day</div>
             </div>
         </div>
+    </div>
 
-        <div class="home_ad_section">
-            <div class="home_salone_body">
-                <div class="home_salone_overlay"></div>
-                <div class="home_salone_data_box">
-                    <div class="home_salone_line_1">Touching&nbsp;life</div>
-                    <div class="home_salone_line_2">every&nbsp;day</div>
-                </div>
+    <div class="home_boutique_section">
+        <div class="home_caption_container">
+            <img src="assets/boutique.png" alt="" class="home_image">
+            <div class="home_caption_text">Boutique</div>
+        </div>
+        <div class="home_salone_body">
+            <div class="home_salone_overlay"></div>
+            <div class="home_salone_data_box">
+                <div class="home_salone_line_1">A&nbsp;style&nbsp;for</div>
+                <div class="home_salone_line_2">every&nbsp;story</div>
             </div>
         </div>
+    </div>
 
-        <div class="home_boutique_section">
-            <div class="home_caption_container">
-                <img src="assets/boutique.png" alt="" class="home_image">
-                <div class="home_caption_text">Boutique</div>
-            </div>
-            <div class="home_salone_body">
-                <div class="home_salone_overlay"></div>
-                <div class="home_salone_data_box">
-                    <div class="home_salone_line_1">A&nbsp;style&nbsp;for</div>
-                    <div class="home_salone_line_2">every&nbsp;story</div>
+    <div class="home_footer">
+        <div class="home_top_line"></div>
+        <div class="home_data_box">
+            <div class="home_left_sec">
+                <img src="assets/logo_color_small.png" alt="" class="home_left_logo">
+                <div class="home_data_container">
+
+                    <div class="home_heading">S.Squared</div>
+                    <div class="home_sub_heading">Beauty&nbsp;Salon&nbsp;&bull;&nbsp;Spa&nbsp;&bull;&nbsp;Boutique
+                    </div>
+                    <div class="home_line"></div>
+
+                    <div class="home_phone">
+                        <img src="assets/phone.svg" alt="" class="home_icon phone">
+                        <div>+974&nbsp;40292962/40292963</div>
+                    </div>
+                    <div class="home_mail">
+                        <img src="assets/mail.svg" alt="" class="home_icon">
+                        <div>info@ssquared.qa</div>
+                    </div>
+                    <div class="home_insta">
+                        <img src="assets/instagram.svg" alt="" class="home_icon">
+                        <div>@ssquare_salon</div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-
-        <div class="home_footer">
-            <div class="home_top_line"></div>
-            <div class="home_data_box">
-                <div class="home_left_sec">
-                    <img src="assets/logo_color_small.png" alt="" class="home_left_logo">
-                    <div class="home_data_container">
-
-                        <div class="home_heading">S.Squared</div>
-                        <div class="home_sub_heading">Beauty&nbsp;Salon&nbsp;&bull;&nbsp;Spa&nbsp;&bull;&nbsp;Boutique
-                        </div>
-                        <div class="home_line"></div>
-
-                        <div class="home_phone">
-                            <img src="assets/phone.svg" alt="" class="home_icon phone">
-                            <div>+974&nbsp;40292962/40292963</div>
-                        </div>
-                        <div class="home_mail">
-                            <img src="assets/mail.svg" alt="" class="home_icon">
-                            <div>info@ssquared.qa</div>
-                        </div>
-                        <div class="home_insta">
-                            <img src="assets/instagram.svg" alt="" class="home_icon">
-                            <div>@ssquare_salon</div>
-                        </div>
-
+            <div class="home_right_sec">
+                <div class="home_right_data">
+                    <div class="home_social_container">
+                        <a href="www.facebook.com"><img class="home_icon" src="assets/social/facebook.svg"
+                                                        alt=""></a>
+                        <a href="www.instagram.com"><img class="home_icon" src="assets/social/instagram.svg" alt=""></a>
+                        <a href="www.youtube.com"><img class="home_icon" src="assets/social/youtube.svg" alt=""></a>
+                        <a href="www.twitter.com"><img class="home_icon" src="assets/social/twitter.svg" alt=""></a>
+                        <a href="www.linkedin.com"><img class="home_icon" src="assets/social/linkedin.svg"
+                                                        alt=""></a>
                     </div>
-                </div>
-                <div class="home_right_sec">
-                    <div class="home_right_data">
-                        <div class="home_social_container">
-                            <a href="www.facebook.com"><img class="home_icon" src="assets/social/facebook.svg"
-                                                            alt=""></a>
-                            <a href="www.instagram.com"><img class="home_icon" src="assets/social/instagram.svg" alt=""></a>
-                            <a href="www.youtube.com"><img class="home_icon" src="assets/social/youtube.svg" alt=""></a>
-                            <a href="www.twitter.com"><img class="home_icon" src="assets/social/twitter.svg" alt=""></a>
-                            <a href="www.linkedin.com"><img class="home_icon" src="assets/social/linkedin.svg"
-                                                            alt=""></a>
-                        </div>
-                        <div class="home_copyright">Copyright &copy; 2019 S.SQUARE All Rights Reserved</div>
-                    </div>
+                    <div class="home_copyright">Copyright &copy; 2019 S.SQUARE All Rights Reserved</div>
                 </div>
             </div>
         </div>
@@ -205,9 +203,16 @@
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Menu Toggle Script -->
 <script>
-    $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+    $(document).ready(function() {
+
+        $("#menu-toggle").click(function() {
+            $(".mob-nav").addClass("active");
+        })
+
+        
+        $("#mob-nav-close").click(function() {
+            $(".mob-nav").removeClass("active");
+        });
     });
 </script>
 

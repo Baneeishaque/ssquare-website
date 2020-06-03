@@ -1,0 +1,245 @@
+// fonts
+@font-face {
+    font-family: 'BlackPinkSignature';
+    src: url('../fonts/Black_Pink_Signature.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TenezRegular';
+    src: url('../fonts/Tenez-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TenezItalic';
+    src: url('../fonts/Tenez-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TakenbyVulturesDemo';
+    src: url('../fonts/Taken_by_Vultures_Demo.otf') format('truetype');
+}
+
+// ----------------
+
+// colors
+$white: #FFFFFF;
+$black: #000000;
+$primary_dark: #AD6A6C;
+$primary: #FAD0CD;
+$primary_light: #F9CAC8;
+$dark: #6D6E71;
+// ----------------
+// variables
+$nav-height: 130px;
+//font sizes
+$f-heading: 24px;
+$f-header: 22px;
+$f-normal: 20px;
+$f-small: 17px;
+// ----------------
+// break points
+$xtv: 1400px;
+$tv: 1200px;
+$laptop: 900px;
+$tab: 600px;
+$mobile: 400px;
+$xsmall: 320px;
+// ----------------
+// z-index
+// landing-page: 700
+// alert-box : 500
+// mob-nav : 999
+// nav-bar : 100
+// galley-popup : 100
+// ----------------
+
+
+@mixin responsive($point) {
+    @if $point==xtv {
+        @media only screen and (min-width: $xtv) {
+            @content ;
+        }
+    }
+    
+    @if $point==tv {
+        @media only screen and (max-width: $tv) {
+            @content ;
+        }
+    }
+
+    @else if $point==laptop {
+        @media only screen and (max-width: $laptop) {
+            @content ;
+        }
+    }
+
+    @else if $point==tab {
+        @media only screen and (max-width: $tab) {
+            @content ;
+        }
+    }
+
+    @else if $point==mobile {
+        @media only screen and (max-width: $mobile) {
+            @content ;
+        }
+    }
+
+    @else if $point==xsmall {
+        @media only screen and (max-width: $xsmall) {
+            @content ;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+.mob-nav {
+    position: fixed;
+    left: calc(0% - 100%);
+    top: 0px;
+    background-color: rgba(#FFFFFF, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    // display: none;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    transition: 500ms;
+
+    &::-webkit-scrollbar { width: 0 !important }
+
+    &.active {
+        left: 0px;
+    }
+
+    .close {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background-image: url(../assets/close.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .inner-body {
+        box-sizing: border-box;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        img {
+            height: 140px;
+            width: auto;
+            margin-bottom: 40px;
+            transition: 400ms;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+            
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .item {
+            padding: 7px 20px;
+            box-sizing: border-box;
+            margin-bottom: 7px;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            transition: 500ms;
+
+            font-family: 'TenezRegular';
+            font-weight: bold;
+            color: #6D6E71;
+
+
+
+
+            &::after {
+                content: "";
+                height: 0px;
+                width: 0px;
+                border-radius: 50%;
+                background-color: #f8caca;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: 500ms;
+                opacity: 0.4;
+            }
+
+            &::before {
+                content: "";
+                height: 0px;
+                width: 0px;
+                border-radius: 50%;
+                background-color: $white;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: 800ms;
+                opacity: 0.6;
+            }
+
+            &.pop {
+                &::after {
+                    height: 2000px;
+                    width: 2000px;
+                    opacity: 1;
+                }
+
+                &::before {
+                    height: 2000px;
+                    width: 2000px;
+                    opacity: 1;
+                }
+            }
+            
+
+            &:nth-last-child(1) {
+                margin-bottom: 0px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                color: #AC6A6C;
+            }
+
+            &.active {
+                color: #AC6A6C;
+            }
+            
+        }
+        
+        
+    }
+    
+}

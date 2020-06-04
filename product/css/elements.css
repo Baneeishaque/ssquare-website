@@ -589,6 +589,7 @@ body {
   margin: 10px;
   max-width: 280px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 570px) {
@@ -597,11 +598,18 @@ body {
   }
 }
 
+.products-section-main .product-section .product-container .product-card:hover img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .products-section-main .product-section .product-container .product-card img {
   height: 300px;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 
 @media only screen and (max-width: 570px) {

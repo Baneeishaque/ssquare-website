@@ -438,6 +438,13 @@ body {
       border-radius: 2px;
 
       cursor: pointer;
+
+      transition: 600ms;
+      
+      &:hover {
+        background-position:140px;  
+      }
+      
       @media only screen and (max-width: 500px) {
         font-size: 10px;
         bottom: 50px;
@@ -644,10 +651,24 @@ body {
         justify-content: center;
         align-items: center;
 
+        &:hover {
+
+          .home_pattern_2 {
+            transform: rotate(45deg);
+          
+            .home_salone_item_image {
+              transform: rotate(-45deg) scale(1.1);
+            }
+
+          }
+        }
+        
+
         .home_pattern_2 {
           height: calc(100% - 6px);
           width: calc(100% - 6px);
           border-radius: 50%;
+          overflow: hidden;
           background: url(../assets/image_1.png) no-repeat center;
 
           display: flex;
@@ -1071,6 +1092,11 @@ body {
           border-radius: 2px;
   
           cursor: pointer;
+
+          &:hover {
+            background-position:132px;
+          }
+          
   
         }
       }

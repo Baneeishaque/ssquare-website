@@ -444,15 +444,25 @@ body {
                 margin: 10px;
                 max-width: 280px;
                 text-transform: uppercase;
+                cursor: pointer;
 
                 @include responsive(tab) {
                     max-width: 200px;
                 }
 
+                &:hover {
+                    
+                    img {
+                        transform: scale(0.9);
+                    }
+                }
+                
+
                 img {
                     height: 300px;
                     width: 100%;
                     object-fit: contain;
+                    transition: $transition-normal;
 
                     @include responsive(tab) {
                         height: 200px;

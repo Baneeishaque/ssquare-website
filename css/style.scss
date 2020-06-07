@@ -232,20 +232,23 @@ body {
 
   @keyframes moveLogo {
     0% {
-      transform: rotate(0deg);
+      transform: scale(1);
     }
 
-    25% {
-      transform: rotate(0deg);
+    20% {
+      transform: scale(1.1);    }
+
+    40% {
+      transform: scale(1.05);
     }
 
-    50% {
-      transform: rotate(180deg);
+    85% {
+      transform: scale(1.2);
+      
     }
 
     100% {
-      transform: rotate(720deg);
-      
+      transform: scale(1);
     }
   }
   
@@ -514,28 +517,60 @@ body {
   .home_salone_body {
     // border: 1px solid red;
     box-sizing: border-box;
-    height: 600px;
+    // min-height: 500px;
     width: 100%;
+    height: fit-content;
 
-    background: url(../assets/image_4.png) no-repeat center;
-    background-size: cover;
-    transition: background 500ms;
+    // background: url(../assets/image_4.png) no-repeat center;
+    // background-size: cover;
+    // transition: background 500ms;
+    background-color: white;
     transition: height 500ms;
 
     @media only screen and (max-width: 700px) {
-      background-position-x: 72%;
+      // background-position-x: 72%;
     }
 
     @media only screen and (max-width: 500px) {
-      height: 300px;
+      // min-height: 300px;
     }
 
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     position: relative;
+
+    .content {
+      font-family: "TenezItalic";
+      font-size: 35px;
+      text-align: center;
+      color: #E6B9B2;
+      padding: 10px;
+      box-sizing: border-box;
+      max-width: 600px;
+      transition: 400ms;
+      padding: 50px 10px;
+
+      @include responsive(laptop) {
+        font-size: 30px;
+      }
+
+      @include responsive(medium) {
+        font-size: 25px;
+      }
+
+      @include responsive(tab) {
+        font-size: 22px;
+      }
+
+      @include responsive(mobile) {
+        font-size: 20px;
+      }
+      
+      
+    }
 
     .home_salone_overlay {
       position: absolute;
@@ -687,7 +722,8 @@ body {
 
       .home_salone_item_caption {
         font-family: "TenezRegular";
-        font-size: 14px;
+        font-size: 15px;
+        text-transform: uppercase;
       }
 
     }
@@ -756,14 +792,15 @@ body {
     box-sizing: border-box;
     height: 600px;
     width: 100%;
+    background-color: white;
 
-    background: url(../assets/image_5.png) no-repeat center;
-    background-size: cover;
+    background: url(../assets/image_8.png) no-repeat right;
+    background-size: contain;
     transition: background 500ms;
     transition: height 500ms;
 
     @media only screen and (max-width: 700px) {
-      background-position-x: 72%;
+      // background-position-x: 72%;
     }
 
     @media only screen and (max-width: 500px) {
@@ -796,14 +833,23 @@ body {
     }
 
     .home_salone_data_box {
-      width: 70%;
+      width: 100%;
       text-align: center;
       transition: all 500ms;
       color: $primary_dark_2;
-      padding: 0px 0px 0px 30px;
+      padding: 0px 0px 0px 80px;
       box-sizing: border-box;
 
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
       z-index: 2;
+
+      @include responsive(tab) {
+        padding-left: 20px;
+      }
+      
 
       @media only screen and (max-width: 700px) {
         width: 100%;
@@ -815,34 +861,61 @@ body {
         transform: scale(0.5);
       }
 
-      .home_salone_line_1 {
-        font-family: "TenezRegular";
-        font-size: 50px;
-        font-weight: 500;
-
-      }
-
-      .home_salone_line_1 {
-        // margin-bottom: 10px;
-        position: relative;
-        left: -155px;
-
-        @media only screen and (max-width: 500px) {
-          left: -65px;
-        }
-      }
-
       .home_salone_line_2 {
         font-family: "BlackPinkSignature";
         font-size: 170px;
         position: relative;
-        top: -100px;
+        // top: -100px;
         // left: 50px;
 
-        @media only screen and (max-width: 500px) {
-          top: -50px;
+        @include responsive(tv) {
+          font-size: 150px;
+        }
+
+        @include responsive(laptop) {
+          font-size: 130px;
+        }
+
+        @include responsive(medium) {
           font-size: 100px;
         }
+
+        @include responsive(tab) {
+          font-size: 120px;
+        }
+
+        @include responsive(mobile) {
+          font-size: 100px;
+        }
+      }
+
+      .home_salone_line_3 {
+        font-family: "TenezItalic";
+        font-size: 30px;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        max-width: 600px;
+        transition: 400ms;
+        padding: 50px 10px;
+
+        @include responsive(laptop) {
+          font-size: 30px;
+        }
+
+        @include responsive(medium) {
+          // font-size: 25px;
+        }
+
+        @include responsive(tab) {
+          width: 400px;
+          // font-size: 22px;
+        }
+
+        @include responsive(mobile) {
+          // font-size: 20px;
+        }
+
       }
 
       .home_salone_line_1,
@@ -1184,6 +1257,7 @@ body {
 .home_ad_section {
   width: 100%;
   height: fit-content;
+  overflow: hidden;
 
   .home_salone_body {
     // border: 1px solid red;
@@ -1236,7 +1310,6 @@ body {
       text-align: center;
       transition: all 500ms;
       color: #FFFFFF;
-      // border: 1px solid red;
       padding: 0px 0px 0px 30px;
       box-sizing: border-box;
 
@@ -1274,11 +1347,26 @@ body {
         font-family: "BlackPinkSignature";
         font-size: 170px;
         position: relative;
-        top: -100px;
+        // top: -100px;
         // left: 50px;
 
-        @media only screen and (max-width: 500px) {
-          top: -50px;
+        @include responsive(tv) {
+          font-size: 150px;
+        }
+
+        @include responsive(laptop) {
+          font-size: 130px;
+        }
+
+        @include responsive(medium) {
+          font-size: 100px;
+        }
+
+        @include responsive(tab) {
+          font-size: 120px;
+        }
+
+        @include responsive(mobile) {
           font-size: 100px;
         }
       }
@@ -1378,9 +1466,18 @@ body {
   }
 
   .home_top_line {
-    height: 20px;
+    height: 50px;
     width: 100%;
     background-color: #FDE6DE;
+
+    @include responsive(tab) {
+      height: 30px;
+    }
+
+    @include responsive(mobile) {
+      height: 20px;
+    }
+    
   }
 
   .home_data_box {

@@ -265,39 +265,47 @@ body {
 
 @-webkit-keyframes moveLogo {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
-  25% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+  20% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
-  50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+  40% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  85% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   100% {
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes moveLogo {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
-  25% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+  20% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
-  50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+  40% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  85% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   100% {
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -598,39 +606,64 @@ body {
 .home_salone_section .home_salone_body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 600px;
   width: 100%;
-  background: url(../assets/image_4.png) no-repeat center;
-  background-size: cover;
-  -webkit-transition: background 500ms;
-  transition: background 500ms;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
   -webkit-transition: height 500ms;
   transition: height 500ms;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
 }
 
-@media only screen and (max-width: 700px) {
-  .home_salone_section .home_salone_body {
-    background-position-x: 72%;
+.home_salone_section .home_salone_body .content {
+  font-family: "TenezItalic";
+  font-size: 35px;
+  text-align: center;
+  color: #E6B9B2;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 600px;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  padding: 50px 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .home_salone_section .home_salone_body .content {
+    font-size: 30px;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .home_salone_section .home_salone_body {
-    height: 300px;
+@media only screen and (max-width: 750px) {
+  .home_salone_section .home_salone_body .content {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .home_salone_section .home_salone_body .content {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home_salone_section .home_salone_body .content {
+    font-size: 20px;
   }
 }
 
@@ -800,7 +833,8 @@ body {
 
 .home_salone_section .home_salone_footer_section .home_item_body .home_salone_item_caption {
   font-family: "TenezRegular";
-  font-size: 14px;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
 .home_boutique_section {
@@ -867,8 +901,9 @@ body {
           box-sizing: border-box;
   height: 600px;
   width: 100%;
-  background: url(../assets/image_5.png) no-repeat center;
-  background-size: cover;
+  background-color: white;
+  background: url(../assets/image_8.png) no-repeat right;
+  background-size: contain;
   -webkit-transition: background 500ms;
   transition: background 500ms;
   -webkit-transition: height 500ms;
@@ -887,12 +922,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-}
-
-@media only screen and (max-width: 700px) {
-  .home_boutique_section .home_salone_body {
-    background-position-x: 72%;
-  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -921,15 +950,31 @@ body {
 }
 
 .home_boutique_section .home_salone_body .home_salone_data_box {
-  width: 70%;
+  width: 100%;
   text-align: center;
   -webkit-transition: all 500ms;
   transition: all 500ms;
   color: #E6B9B3;
-  padding: 0px 0px 0px 30px;
+  padding: 0px 0px 0px 80px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   z-index: 2;
+}
+
+@media only screen and (max-width: 570px) {
+  .home_boutique_section .home_salone_body .home_salone_data_box {
+    padding-left: 20px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -948,34 +993,64 @@ body {
   }
 }
 
-.home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_1 {
-  font-family: "TenezRegular";
-  font-size: 50px;
-  font-weight: 500;
-}
-
-.home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_1 {
-  position: relative;
-  left: -155px;
-}
-
-@media only screen and (max-width: 500px) {
-  .home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_1 {
-    left: -65px;
-  }
-}
-
 .home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
   font-family: "BlackPinkSignature";
   font-size: 170px;
   position: relative;
-  top: -100px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1200px) {
   .home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
-    top: -50px;
+    font-size: 150px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
+    font-size: 130px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
     font-size: 100px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
+    font-size: 120px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
+    font-size: 100px;
+  }
+}
+
+.home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_3 {
+  font-family: "TenezItalic";
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 600px;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  padding: 50px 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_3 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .home_boutique_section .home_salone_body .home_salone_data_box .home_salone_line_3 {
+    width: 400px;
   }
 }
 
@@ -1358,6 +1433,7 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  overflow: hidden;
 }
 
 .home_ad_section .home_salone_body {
@@ -1469,12 +1545,34 @@ body {
   font-family: "BlackPinkSignature";
   font-size: 170px;
   position: relative;
-  top: -100px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1200px) {
   .home_ad_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
-    top: -50px;
+    font-size: 150px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .home_ad_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
+    font-size: 130px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .home_ad_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
+    font-size: 100px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .home_ad_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
+    font-size: 120px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home_ad_section .home_salone_body .home_salone_data_box .home_salone_line_2 {
     font-size: 100px;
   }
 }
@@ -1592,9 +1690,21 @@ body {
 }
 
 .home_footer .home_top_line {
-  height: 20px;
+  height: 50px;
   width: 100%;
   background-color: #FDE6DE;
+}
+
+@media only screen and (max-width: 570px) {
+  .home_footer .home_top_line {
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home_footer .home_top_line {
+    height: 20px;
+  }
 }
 
 .home_footer .home_data_box {
